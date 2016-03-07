@@ -1,0 +1,40 @@
+@include("_begin.html");
+<style type="text/css">
+</style>
+@include("_sidebar.html",{"current": "table"});
+<div class="content">
+    <table class="xxx"></table>
+</div>
+@include("_script.html");
+<script type="text/javascript">
+$(function() {
+    var opt = {
+        sel: ".xxx",
+        col: [{
+            key: "id",
+            title: "ID",
+            sort: true
+        }, {
+            key: "phone",
+            title: "电话",
+            sort: false,
+            invisible: true
+        }, {
+            key: "money",
+            title: "金额",
+            sort: true
+        }, {
+            key: "role",
+            title: "权限",
+            sort: true,
+            render: function(a, b) {
+                a.append(b + "大会上");
+            }
+        }],
+        page: false,
+        url: "../js/_table.json"
+    };
+    table.init(opt);
+});
+</script>
+@include("_end.html");

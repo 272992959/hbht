@@ -1,0 +1,78 @@
+@include("_begin.html");
+    <style type="text/css">
+        .ct_2{
+            height: 300px;
+            margin-top: 30px;
+        }
+    </style>
+@include("_sidebar.html",{"current": "chart"});
+    <div class="content">
+        <h1>图表示例（二） <small>-厚步小编</small></h1>
+        <div class="grid_lg">
+            <div class="ct_2"></div>
+            <div class="ct_2"></div>
+        </div>
+    </div>
+@include("_script.html");
+    <script type="text/javascript">
+        $(function() {
+            $.ajax({
+                url: "../js/_data.json",
+                dataType: "json"
+            }).always(function(data) {
+                var list = data.lists.reverse();
+
+                var opt = chart.data2opt(list,{dataOpt:[{
+                    name: "快速任务销售额",
+                    value: "price_task.taskprice",
+                    type: "bar",
+                    stack: "任务销售额"
+                }, {
+                    name: "联盟任务销售额",
+                    value: "price_sdk",
+                    type: "bar",
+                    stack: "任务销售额"
+                }],myOpt:{
+                    title:{
+                        text: "任务销售额",
+                        left:"center"
+                    },
+                    dataZoom: {
+                        type: 'inside',
+                        start: 60,
+                        end: 100
+                    },
+                    legend:{
+                        top:"30px",
+                        left:0
+                    }
+                }});
+                
+                var opt2 = chart.data2opt(list,{dataOpt:[{
+                    name: "新增用户数量",
+                    value: "newdid"
+                }, {
+                    name: "活跃用户数量",
+                    value: "uid_log_count"
+                }],myOpt:{
+                    title:{
+                        text: "用户数量",
+                        left:"center"
+                    },
+                    dataZoom: {
+                        type: 'slider',
+                        start: 80,
+                        end: 100
+                    },
+                    legend:{
+                        top:"30px",
+                        left:0
+                    }
+                }});
+
+                chart.renderChart($(".ct_2")[0],opt);
+                chart.renderChart($(".ct_2")[1],opt2);
+            });
+        });
+    </script>
+@include("_end.html");

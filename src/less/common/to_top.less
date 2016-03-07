@@ -1,0 +1,22 @@
+#to_top{
+    position: fixed;
+    bottom: -100px;
+    right: 40px;
+    color: #FFF;
+    font-size: 40px;
+    background-color: rgba(58, 176, 255, 0);
+    line-height: 1em;
+    padding: 10px;
+    border-radius: 100%;
+    cursor: pointer;
+    z-index: 99;
+    .user-select(none);
+    .transition(all .5s);
+    .iconfont{
+        font-size: inherit;
+    }
+}
+#to_top.show{
+    bottom: 40px;
+    background-color: rgba(58, 176, 255, 0.8);
+}

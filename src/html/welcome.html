@@ -1,0 +1,48 @@
+@include("_begin.html");
+    <style type="text/css">
+        .content{
+            position: relative;
+        }
+        .container{
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            margin-top: -165px;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+        }
+        .iconWelcome{
+            font-size: 200px;
+            line-height: 1em;
+            color: #FF5D5D;
+            margin: 0 -30px;
+            text-shadow: 10px 10px 5px #ddd;
+        }
+        .iconWelcome:first-of-type,.iconWelcome:last-of-type{
+            font-size: 80px;
+            color: #FF7070;
+        }
+        p.desc{
+            font-size: 30px;
+            margin: 50px 0;
+            line-height: 1em;
+            cursor: default;
+            color: #3AB0FF;
+        }
+    </style>
+@include("_sidebar.html",{"current": "welcome"});
+    <div class="content">
+        <div class="container">
+            <i class="iconfont icon-617 iconWelcome"></i>
+            <i class="iconfont icon-617 iconWelcome"></i>
+            <i class="iconfont icon-617 iconWelcome"></i>
+            <p class="desc">欢迎访问~</p>
+        </div>
+    </div>
+@include("_script.html");
+@include("_end.html");

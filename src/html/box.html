@@ -1,0 +1,55 @@
+@include("_begin.html");
+@include("_sidebar.html",{"current": "component"});
+    <div class="content">
+        <h1>弹框（box） <small>-bramble</small></h1>
+        <div class="grid">
+            <style type="text/css">
+                .grid .ct{
+                    margin-bottom: 80px;
+                    padding-left: 200px;
+                }
+            </style>
+            <div class="ct">
+                <button class="box0 btn">ajax获取非本页面的html</button>
+            </div>
+            <div class="ct">
+                <button class="box1 btn btn_success">本页面的html</button>
+            </div>
+        </div>
+    </div>
+@include("_script.html");
+    <script type="text/javascript">
+        var box0 = new Box({
+                        title:"添加任务",
+                        html:"table1.html .content",
+                        fnSure: function(t){
+                            console.dir(t)
+                            return false;
+                        },
+                        fnCancel: function(t){
+                            console.dir(t)
+                        },
+                        // html:$(".grid .ct").html()
+                    });
+        var box1 = new Box({
+                        title:"添加任务",
+                        html:$(".grid").html(),
+                        css:{
+                            width: '50%'
+                        },
+                        fnSure: function(t){
+                            console.dir(t)
+                            return false;
+                        },
+                        fnCancel: function(t){
+                            console.dir(t)
+                        },
+                        // html:$(".grid .ct").html()
+                    });
+        $('body').on('click','.box0',function(){
+            box0.show();
+        }).on('click','.box1',function(){
+            box1.show();
+        });
+    </script>
+@include("_end.html");

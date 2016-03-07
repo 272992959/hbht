@@ -1,0 +1,144 @@
+@include("_begin.html"); 
+@include("_sidebar.html",{"current": "component"});
+    <div class="content">
+        <h1>表单元素（form-element） <small>-bramble</small></h1>
+        <div class="grid">
+            <div class="ct_2">
+                <input type="text">
+            </div>
+            <div class="ct_2">
+                <input type="text" disabled value="国际化的实干家">
+            </div>
+            <div class="ct_2">
+                <select>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+            <div class="ct_2">
+                <select disabled>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+            <div class="ct_2">
+                <label class="radio">
+                    <input type="radio" name="radio" checked>
+                    <span class="opt_imitate"></span>
+                    <span class="opt_desc">的撒</span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="radio">
+                    <span class="opt_imitate"></span>
+                    <span class="opt_desc">的撒</span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="radio">
+                    <span class="opt_imitate"></span>
+                    <span class="opt_desc">的撒</span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="radio">
+                    <span class="opt_imitate"></span>
+                    <span class="opt_desc">的撒</span>
+                </label>
+                <label class="radio">
+                    <input type="radio" name="radio" disabled>
+                    <span class="opt_imitate"></span>
+                    <span class="opt_desc">的撒</span>
+                </label>
+            </div>
+            <div class="ct_2">
+                <label class="checkbox">
+                    <input type="checkbox" name="checkbox" checked><span class="opt_imitate"></span>
+                    <span class="opt_desc">的撒</span>
+                    </label>
+                <label class="checkbox">
+                    <input type="checkbox" name="checkbox">
+                    <span class="opt_imitate"></span>
+                    <span class="opt_desc">的撒</span>
+                    </label>
+                <label class="checkbox">
+                    <input type="checkbox" name="checkbox">
+                    <span class="opt_imitate"></span>
+                    <span class="opt_desc">的撒</span>
+                    </label>
+                <label class="checkbox">
+                    <input type="checkbox" name="checkbox">
+                    <span class="opt_imitate"></span>
+                    <span class="opt_desc">的撒</span>
+                    </label>
+                <label class="checkbox">
+                    <input type="checkbox" name="checkbox" disabled><span class="opt_imitate"></span>
+                    <span class="opt_desc">的撒</span>
+                    </label>
+            </div>
+            <div class="ct_2">
+                <label class="whether">
+                    <input type="checkbox" name="radio" checked><span class="opt_imitate">YES</span><span class="opt_imitate">NO</span></label>
+                <label class="whether">
+                    <input type="checkbox" name="radio"><span class="opt_imitate">是</span><span class="opt_imitate">否</span></label>
+            </div>
+            <div class="ct_2">
+                <label class="whether">
+                    <input type="checkbox" name="radio" checked disabled><span class="opt_imitate">YES</span><span class="opt_imitate">NO</span></label>
+                <label class="whether">
+                    <input type="checkbox" name="radio" disabled><span class="opt_imitate">是</span><span class="opt_imitate">否</span></label>
+            </div>
+            <div class="ct_2">
+                <textarea></textarea>
+            </div>
+            <div class="ct_2">
+                <textarea disabled></textarea>
+            </div>
+            <div class="ct_2">
+                <label class="suffix">
+                    <span class="opt_imitate">￥</span><input type="text">
+                </label>
+            </div>
+            <div class="ct_2">
+                <label class="suffix">
+                    <input type="text"><span class="opt_imitate">.00</span>
+                </label>
+            </div>
+            <div class="ct_2">
+                <label class="suffix">
+                    <span class="opt_imitate">￥</span><input type="text"><span class="opt_imitate">.00</span>
+                </label>
+            </div>
+            <div class="ct_2">
+                <label class="suffix">
+                    <input type="text"><span class="opt_imitate btn">搜索</span>
+                </label>
+            </div>
+            <div class="ct_2">
+                <label class="suffix_btn">
+                    <input type="text"><span class="opt_imitate btn btn_success_outline">搜索</span>
+                </label>
+            </div>
+            <div class="ct_2">
+                <label class="suffix">
+                    <input type="text" disabled><span class="opt_imitate btn btn_danger">搜索</span>
+                </label>
+            </div>
+            <div class="ct_2">
+                <label class="suffix_btn">
+                    <input type="text"><span class="opt_imitate btn btn_success">搜索</span>
+                </label>
+            </div>
+            <div class="ct_2">
+                <label class="suffix_btn">
+                    <input type="text"><span class="opt_imitate btn btn_danger">搜索</span>
+                </label>
+            </div>
+            <div class="ct_2">
+                 <input type="date">
+            </div>
+        </div>
+    </div>
+@include("_script.html"); 
+@include("_end.html");

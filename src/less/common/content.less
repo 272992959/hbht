@@ -1,0 +1,22 @@
+.content {
+    min-height: 100%;
+    background-color: @content-bg;
+    position: relative;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    .transition(margin-left @time-tran-next @time-tran-prev);
+    h1{
+        line-height: 2em;
+        font-size: 2em;
+        text-indent: .5em;
+        color: @content-color;
+        margin-top: 0;
+        margin-bottom: 15px;
+        border-left: 8px solid #18CDC4;
+        background-color: #F5F5F5;
+        .ellipsis();
+        small{
+            font-size: .5em;
+        }
+    }
+}

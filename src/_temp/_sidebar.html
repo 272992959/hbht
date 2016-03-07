@@ -1,0 +1,103 @@
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="top_bar">
+            <p class="logo">HouBu</p>
+            <i class="iconfont icon-654 toggle_another_form"></i>
+        </div>
+        <ul class="menu">
+            <li<%= current === "welcome" && ' class=active'%>>
+                <a href="welcome.html">
+                    <i class="iconfont icon-617"></i>
+                    <span class="title">欢迎页面</span>
+                    <span class="arrow"></span>
+                </a>
+            </li>
+            <li<%= current === "login" && ' class=active'%>>
+                <a href="login.html">
+                    <i class="iconfont icon-768"></i>
+                    <span class="title">登录页面</span>
+                    <span class="arrow"></span>
+                </a>
+            </li>
+            <li<%= current === "404" && ' class=active'%>>
+                <a href="404.html">
+                    <i class="iconfont icon-6f4"></i>
+                    <span class="title">404</span>
+                    <span class="arrow"></span>
+                </a>
+            </li>
+            <li<%= current === "error" && ' class=active'%>>
+                <a href="error.html">
+                    <i class="iconfont icon-79b"></i>
+                    <span class="title">错误页面</span>
+                    <span class="arrow"></span>
+                </a>
+            </li>
+            <li<%= current === "test" && ' class=active'%>>
+                <a href="test.html">
+                    <i class="iconfont icon-764"></i>
+                    <span class="title">测试页面</span>
+                    <span class="arrow"></span>
+                </a>
+            </li>
+            <li<%= current === "push" && ' class=active'%>>
+                <a href="push.html">
+                    <i class="iconfont icon-6f6"></i>
+                    <span class="title">推送</span>
+                    <span class="arrow"></span>
+                </a>
+            </li>
+            <li<%= current === "chart" && ' class=active'%>>
+                <a href="javascript:;">
+                    <i class="iconfont icon-67f"></i>
+                    <span class="title">图表</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub_menu">
+                    <li><a href="chart1.html" class="title">图表1</a></li>
+                    <li><a href="chart2.html" class="title">图表2</a></li>
+                </ul>
+            </li>
+            <li<%= current === "table" && ' class=active'%>>
+                <a href="javascript:;">
+                    <i class="iconfont icon-6b2"></i>
+                    <span class="title">表格</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub_menu">
+                    <li><a href="table1.html" class="title">表格1</a></li>
+                    <li><a href="table2.html" class="title">表格2</a></li>
+                </ul>
+            </li>
+            <li<%= current === "component" && ' class=active'%>>
+                <a href="javascript:;">
+                    <i class="iconfont icon-616"></i>
+                    <span class="title">UI组件</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub_menu">
+                    <li><a href="grid.html" class="title">网格布局(grid)</a></li>
+                    <li><a href="button.html" class="title">按钮(button)</a></li>
+                    <li><a href="form_element.html" class="title">表单元素(form-element)</a></li>
+                    <li><a href="mask.html" class="title">遮罩(mask)</a></li>
+                    <li><a href="tip.html" class="title">提示(tip)</a></li>
+                    <li><a href="box.html" class="title">弹框(box)</a></li>
+                    <li><a href="icon_font.html" class="title">图标(iconfont)</a></li>
+                </ul>
+            </li>
+            <li<%= current === "personal" && ' class=active'%>>
+                <a href="javascript:;">
+                    <i class="iconfont icon-6e5"></i>
+                    <span class="title">个人中心</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub_menu">
+                    <li><a href="#" class="title">我的信息</a></li>
+                    <li><a href="#" class="title">修改密码</a></li>
+                    <li><a href="#" class="title">退出登录</a></li>
+                </ul>
+            </li>
+        </ul>
+    </aside>

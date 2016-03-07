@@ -1,0 +1,47 @@
+@include("_begin.html");
+<style type="text/css">
+    .grid{
+        height: 500px;
+    }
+    button{
+        z-index: 1002;
+        position: relative;
+    }
+</style>
+@include("_sidebar.html",{"current": "component"});
+    <div class="content">
+        <h1>遮罩（mask） <small>-bramble</small></h1>
+        <div class="grid">
+            <div class="ct">
+                <button class="btn">普通遮罩</button>
+                <button class="btn btn_success">区域内遮罩</button>
+                <button class="btn btn_primary">带内容遮罩</button>
+                <button class="btn btn_info">定时遮罩</button>
+            </div>
+        </div>
+    </div>
+@include("_script.html");
+<script type="text/javascript">
+    var mask1= new Mask({
+        isShow: false
+    }),mask2= new Mask({
+        isShow: false,
+        $ct: $("h1")
+    }),mask3= new Mask({
+        isShow: false,
+        $ct: $(".grid"),
+        content: "加载中。。。~"
+    });
+    $('button:not(".btn_info")').click(function(){
+        var mask = "mask"+($(this).index()+1);
+        eval(mask+'.toggle()');
+    });
+    $(".btn_info").click(function(){
+        var mask4= new Mask({
+            $ct: $(".content"),
+            content: "加载中。。。~",
+            timeout: 3000
+        });
+    });
+</script>
+@include("_end.html");

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>上海厚步网络科技有限公司</title>
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../css/main.css" media="all" />
+    <style type="text/css">
+        .grid .ct{
+            margin-bottom: 80px;
+            padding-left: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="top_bar">
+            <p class="logo">HouBu</p>
+            <i class="iconfont icon-654 toggle_another_form"></i>
+        </div>
+        <ul class="menu">
+            <li>
+                <a href="welcome.html">
+                    <i class="iconfont icon-617"></i>
+                    <span class="title">欢迎页面</span>
+                    <span class="arrow"></span>
+                </a>
+            </li>
+            <li>
+                <a href="login.html">
+                    <i class="iconfont icon-768"></i>
+                    <span class="title">登录页面</span>
+                    <span class="arrow"></span>
+                </a>
+            </li>
+            <li>
+                <a href="404.html">
+                    <i class="iconfont icon-6f4"></i>
+                    <span class="title">404</span>
+                    <span class="arrow"></span>
+                </a>
+            </li>
+            <li>
+                <a href="error.html">
+                    <i class="iconfont icon-79b"></i>
+                    <span class="title">错误页面</span>
+                    <span class="arrow"></span>
+                </a>
+            </li>
+            <li>
+                <a href="test.html">
+                    <i class="iconfont icon-764"></i>
+                    <span class="title">测试页面</span>
+                    <span class="arrow"></span>
+                </a>
+            </li>
+            <li>
+                <a href="push.html">
+                    <i class="iconfont icon-6f6"></i>
+                    <span class="title">推送</span>
+                    <span class="arrow"></span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i class="iconfont icon-67f"></i>
+                    <span class="title">图表</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub_menu">
+                    <li><a href="chart1.html" class="title">图表1</a></li>
+                    <li><a href="chart2.html" class="title">图表2</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i class="iconfont icon-6b2"></i>
+                    <span class="title">表格</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub_menu">
+                    <li><a href="table1.html" class="title">表格1</a></li>
+                    <li><a href="table2.html" class="title">表格2</a></li>
+                </ul>
+            </li>
+            <li class=active>
+                <a href="javascript:;">
+                    <i class="iconfont icon-616"></i>
+                    <span class="title">UI组件</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub_menu">
+                    <li><a href="grid.html" class="title">网格布局(grid)</a></li>
+                    <li><a href="button.html" class="title">按钮(button)</a></li>
+                    <li><a href="form_element.html" class="title">表单元素(form-element)</a></li>
+                    <li><a href="mask.html" class="title">遮罩(mask)</a></li>
+                    <li><a href="tip.html" class="title">提示(tip)</a></li>
+                    <li><a href="box.html" class="title">弹框(box)</a></li>
+                    <li><a href="icon_font.html" class="title">图标(iconfont)</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i class="iconfont icon-6e5"></i>
+                    <span class="title">个人中心</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub_menu">
+                    <li><a href="#" class="title">我的信息</a></li>
+                    <li><a href="#" class="title">修改密码</a></li>
+                    <li><a href="#" class="title">退出登录</a></li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+    <div class="content">
+        <h1>小提示（tips） <small>-bramble</small></h1>
+        <div class="grid">
+            <div class="ct">
+                <button class="tip0 btn">hover提示,无关闭按钮</button>
+            </div>
+            <div class="ct">
+                <button class="tip1 btn btn_success">固定上方提示,alert</button>
+            </div>
+            <div class="ct">
+                <button class="tip2 btn btn_primary">响应式方向,定时2秒</button>
+            </div>
+            <div class="ct">
+                <button class="tip3 btn btn_info">响应式方向,confirm</button>
+            </div>
+            <div class="ct">
+                <button class="tip4 btn btn_danger">响应式方向3</button>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/echarts.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../js/renderChart.js"></script>
+    <script src="../js/table.js"></script>
+    <script src="../js/mask.js"></script>
+    <script src="../js/tip.js"></script>
+    <script src="../js/box.js"></script>
+    <script src="../js/expression.js"></script>
+    <script src="../js/common.js"></script>
+    <script type="text/javascript">
+        var tip0 = new Tip({
+                        $ct: $(".tip0"),
+                        content: '但是但是但是但是但是但是但是但是但是但是但是但是但是但是但是但是但是但是',
+                        isShow: false,
+                        type: 'hover',
+                        noClose: true
+                    });
+        var tip1 = new Tip({
+                        $ct: $(".tip1"),
+                        content: '多撒谎个会尽快多撒谎个会尽快多撒谎个会尽快多撒谎个会尽快多撒谎个会尽快多撒谎个会尽快',
+                        dir: "top",
+                        isShow: false,
+                        type: "click",
+                        theme: "primary",
+                        alert: true,
+                        alertfn: function(){
+                            alert("点击确认");
+                            // return false;
+                        }
+                    });
+        var tip2 = new Tip({
+                        $ct: $(".tip2"),
+                        content: 'only when u seize today can you not lose tomorrow! only when u seize today can you not lose tomorrow! only when u seize today can you not lose tomorrow! only when u seize today can you not lose tomorrow! only when u seize today can you not lose tomorrow! only when u seize today can you not lose tomorrow!',
+                        isShow: false,
+                        type: "click",
+                        timeout: 2000,
+                        theme: "info",
+                        // dir: "bottom"
+                    });
+        var tip3 = new Tip({
+                        $ct: $(".tip3"),
+                        content: '多会尽快',
+                        confirm: true,
+                        css:{
+                            "white-space": "nowrap"
+                        },
+                        isShow: false,
+                        type: "click",
+                        theme: "warning",
+                        // dir: "left",
+                        alertfn: function(flag){
+                            alert(flag);
+                            // return false;
+                        }
+                    });
+        var tip4 = new Tip({
+                        $ct: $(".tip4"),
+                        content: '多撒谎个会尽快多撒谎个会尽快多撒谎个会尽快多撒谎个会尽快',
+                        css: {
+                            width: "300px"
+                        },
+                        isShow: false,
+                        theme: "danger",
+                        type: "click"
+                        // dir: "right"
+                    });
+    </script>
+    <div id="to_top">
+        <i class="iconfont icon-6cf"></i>
+    </div>
+</body>
+
+</html>

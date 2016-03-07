@@ -1,0 +1,134 @@
+table{
+    width: 100%;
+    border: 1px solid @table-border-color;
+    text-align: left;
+    th,td{
+        border: 1px solid @table-border-color;
+        padding: @cell-padding;
+    }
+    th{
+        color: @th-color;
+        background-color: @th-bg;
+        &.sort,&.sort_asc,&.sort_desc{
+            padding-right: @sort2right*2+@sort-width;
+            position: relative;
+            cursor: pointer;
+            &:before,&:after{
+                content: '';
+                width: 0;
+                height: 0;
+                position: absolute;
+                top: 50%;
+                right: @sort2right;
+                border:@sort-width/2 solid transparent;
+                margin-top: -(@sort-height+1);
+                border-bottom-color: @sort-color;
+                border-top-width: 0px;
+                border-bottom-width: @sort-height;
+            }
+            &:after{
+                margin-top: 1px;
+                border-top-color: @sort-color;
+                border-bottom-width: 0px;
+                border-top-width: @sort-height;
+            }
+        }
+        &.sort_asc{
+            &:before{
+                margin-top: -(@sort-height/2);
+                border-bottom-color: @sort-active-color;
+            }
+            &:after{
+                content: none;
+            }
+        }
+        &.sort_desc{
+            &:before{
+                content: none;
+            }
+            &:after{
+                margin-top: -(@sort-height/2);
+                border-top-color: @sort-active-color;
+            }
+        }
+    }
+    td{
+        color: @td-color;
+    }
+    &+.page{
+        .table_info,.table_btns{
+            white-space: nowrap;
+            color: @table-info-color;
+            line-height: @page-height;
+        }
+        .table_btns{
+            text-align: right;
+            white-space: nowrap;
+            [class^='btn']{
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+            label{
+                .user-select(none);
+                .curPage{
+                    width: @table-curPage-width;
+                    height: auto;
+                    text-align: center;
+                    padding: @btn-padding 0;
+                    margin: 0 1px;
+                    border-radius: 0;
+                    color: @table-curPage-color;
+                }
+            }
+            .prev{
+                margin-right: @table-curPage-margin;
+            }
+            .next{
+                margin-left: @table-curPage-margin;
+            }
+        }
+    }
+}
+
+@media (max-width: @screen-sm) {
+    table{
+        &+.page{
+            .table_info{
+                text-align: right;
+                font-size: 12px;
+                line-height: @page-height *0.4;
+            }
+            .table_btns{
+                text-align: center;
+                line-height: @page-height *0.6;
+                label{
+                    .curPage{
+                        font-size: 12px;
+                        line-height: 1em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: @screen-md) {
+    table{
+        &+.page{
+            .table_btns{
+                [class^='btn']{
+                    padding: @btn-padding/2 @btn-padding;
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                }
+                label{
+                    .curPage{
+                        padding: @btn-padding/2 0;
+                    }
+                }
+            }
+        }
+    }
+}

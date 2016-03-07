@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>上海厚步网络科技有限公司</title>
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../css/main.css" media="all" />
+    <style type="text/css">
+        .container{
+            max-width: 960px;
+            min-width: 330px;
+            margin: 0 auto;
+        }
+        input[type="color"]{
+            font-size: 14px;
+            box-sizing: border-box;
+            width: 100%;
+            height: 30px;
+            vertical-align: middle;
+            color: #333333;
+            border: 1px solid #cccccc;
+            border-radius: 3px;
+            outline: 0;
+            background-color: #ffffff;
+            -webkit-appearance: none;
+            -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+        }
+        .desc{
+            color: #999;
+        }
+        .message {
+            border: 1px solid #e7e7eb;
+            margin: 10px 5px;
+        }
+        .message_type {
+            color: #999;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .message_type:first-child {
+            text-indent: 0px;
+        }
+
+        .message_type:hover .iconfont,
+        .message_type [type="radio"]:checked ~ *{
+            color: #333;
+        }
+        .grid .person_num{
+            padding-left: 20px;
+            color: #999;
+        }
+        .grid .person_num > span{
+            padding: 0 5px;
+            color: #333;
+            font-size: 16px;
+        }
+        .message_header {
+            border-bottom: 1px solid #e7e7eb;
+            padding-left: 10px;
+            font-size: 0;
+        }
+
+        .message_text .text_info_ct {
+            padding: 0;
+        }
+
+        .message_text textarea {
+            border: none;
+            height: 200px;
+        }
+
+        .message_text .message_text_footer {
+            border-top: 1px solid #e7e7eb;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .message_text_footer .link2expression {
+            cursor: pointer;
+            font-size: 20px;
+            color: #999;
+        }
+
+        .message_text_footer .link2expression:hover,.message_text_footer .link2expression.active {
+            color: #333;
+        }
+
+        .message_graphical {
+            box-sizing: border-box;
+            padding: 100px 40px;
+        }
+
+        .message_template {
+            box-sizing: border-box;
+            padding: 20px 40px;
+        }
+
+        .send_btn_ct {
+            text-align: right;
+        }
+
+        #sendMsg {
+            padding: 7px 25px;
+            font-size: 16px;
+        }
+        .field{
+            color: #4A4A4A;
+        }
+        .field_sec{
+            color: #7c7c7c;
+        }
+    </style>
+</head>
+
+<body>
+    <aside class="sidebar">
+        <div class="top_bar">
+            <p class="logo">HouBu</p>
+            <i class="iconfont icon-654 toggle_another_form"></i>
+        </div>
+        <ul class="menu">
+            <li>
+                <a href="welcome.html">
+                    <i class="iconfont icon-617"></i>
+                    <span class="title">欢迎页面</span>
+                    <span class="arrow"></span>
+                </a>
+            </li>
+            <li>
+                <a href="login.html">
+                    <i class="iconfont icon-768"></i>
+                    <span class="title">登录页面</span>
+                    <span class="arrow"></span>
+                </a>
+            </li>
+            <li>
+                <a href="404.html">
+                    <i class="iconfont icon-6f4"></i>
+                    <span class="title">404</span>
+                    <span class="arrow"></span>
+                </a>
+            </li>
+            <li>
+                <a href="error.html">
+                    <i class="iconfont icon-79b"></i>
+                    <span class="title">错误页面</span>
+                    <span class="arrow"></span>
+                </a>
+            </li>
+            <li>
+                <a href="test.html">
+                    <i class="iconfont icon-764"></i>
+                    <span class="title">测试页面</span>
+                    <span class="arrow"></span>
+                </a>
+            </li>
+            <li class=active>
+                <a href="push.html">
+                    <i class="iconfont icon-6f6"></i>
+                    <span class="title">推送</span>
+                    <span class="arrow"></span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i class="iconfont icon-67f"></i>
+                    <span class="title">图表</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub_menu">
+                    <li><a href="chart1.html" class="title">图表1</a></li>
+                    <li><a href="chart2.html" class="title">图表2</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i class="iconfont icon-6b2"></i>
+                    <span class="title">表格</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub_menu">
+                    <li><a href="table1.html" class="title">表格1</a></li>
+                    <li><a href="table2.html" class="title">表格2</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i class="iconfont icon-616"></i>
+                    <span class="title">UI组件</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub_menu">
+                    <li><a href="grid.html" class="title">网格布局(grid)</a></li>
+                    <li><a href="button.html" class="title">按钮(button)</a></li>
+                    <li><a href="form_element.html" class="title">表单元素(form-element)</a></li>
+                    <li><a href="mask.html" class="title">遮罩(mask)</a></li>
+                    <li><a href="tip.html" class="title">提示(tip)</a></li>
+                    <li><a href="box.html" class="title">弹框(box)</a></li>
+                    <li><a href="icon_font.html" class="title">图标(iconfont)</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i class="iconfont icon-6e5"></i>
+                    <span class="title">个人中心</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub_menu">
+                    <li><a href="#" class="title">我的信息</a></li>
+                    <li><a href="#" class="title">修改密码</a></li>
+                    <li><a href="#" class="title">退出登录</a></li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+    <div class="content">
+        <h1>推送消息 <small>-微信平台消息推送</small></h1>
+        <div class="container">
+            <form class="grid" id="form_query">
+                <div class="ct_6">
+                    <div class="desc">
+                        最高来赚版本
+                    </div>
+                    <select name="app_version" id="app_version">
+                        <option value="">所有版本</option>
+                    </select>
+                </div>
+                <div class="ct_6">
+                    <div class="desc">
+                        最低IOS版本
+                    </div>
+                    <select name="sys_version" id="sys_version">
+                        <option value="">所有版本</option>
+                    </select>
+                </div>
+                <div class="ct_6">
+                    <div class="desc">
+                        最后登录时间
+                    </div>
+                    <select name="login_date" id="login_date">
+                        <option value="">无限制</option>
+                        <option value="1">1天内</option>
+                        <option value="3">3天内</option>
+                        <option value="5">5天内</option>
+                        <option value="7">7天内</option>
+                        <option value="15">15天内</option>
+                        <option value="30">30天内</option>
+                    </select>
+                </div>
+                <div class="ct_2 person_num">
+                    已发人数: <span class="person_num_sended">--</span>人，总人数: <span class="person_num_all">--</span>人。
+                </div>
+            </form>
+            <form class="message" id="form_content">
+                <div class="message_header">
+                    <label class="radio message_type">
+                        <input type="radio" name="send_type" value="text" checked="checked" data-show=".message_text">
+                        <i class="iconfont icon-62d"></i>
+                        <span class="opt_desc">文字消息</span>
+                    </label>
+                    <label class="radio message_type">
+                        <input type="radio" name="send_type" value="img_text" data-show=".message_graphical">
+                        <i class="iconfont icon-62f"></i>
+                        <span class="opt_desc">图文消息</span>
+                    </label>
+                    <label class="radio message_type">
+                        <input type="radio" name="send_type" value="temp" data-show=".message_template">
+                        <i class="iconfont icon-665"></i>
+                        <span class="opt_desc">模板消息</span>
+                    </label>
+                </div>
+                <div class="message_body">
+                    <div class="grid message_text">
+                        <div class="ct text_info_ct">
+                            <textarea id="text_info" name="text_info"></textarea>
+                        </div>
+                        <div class="ct message_text_footer">
+                            <i class="iconfont icon-6fc link2expression"></i>
+                        </div>
+                    </div>
+                    <div class="grid message_graphical hidden">
+                        <div class="ct_6 field">图文消息ID</div>
+                        <div class="ct_6-5">
+                            <input type="text" id="img_text_info" name="img_text_info">
+                        </div>
+                    </div>
+                    <ul class="grid message_template hidden">
+                        <li>
+                            <div class="ct_6 field">模板消息ID</div>
+                            <div class="ct_6-5">
+                                <select name="temp_id" id="temp_id"></select>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </form>
+            <div class="grid">
+                <div class="ct send_btn_ct">
+                    <button type="button" class="btn btn_success" id="sendMsg">群发</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/echarts.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../js/renderChart.js"></script>
+    <script src="../js/table.js"></script>
+    <script src="../js/mask.js"></script>
+    <script src="../js/tip.js"></script>
+    <script src="../js/box.js"></script>
+    <script src="../js/expression.js"></script>
+    <script src="../js/common.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        var versionUrl = "http://admin.cc:8080/module/getVersion";
+        var sendUrl = "http://admin.cc:8080/module/wexinPush";
+        var tempUrl = "http://admin.cc:8080/module/wexinTemp";
+
+        var app_version_default = ["1.0", "1.0.2", "1.1.2", "1.1.3", "1.1.5", "1.1.6", "1.1.7", "1.1.8", "1.1.9", "1.2.1", "1.2.2", "1.2.3", "1.2.5", "1.3.0"];
+        var sys_version_default = ["6.0", "6.0.1", "6.0.2", "6.1", "6.1.1", "6.1.2", "6.1.3", "6.1.4", "6.1.6", "7.0", "7.0.1", "7.0.2", "7.0.3", "7.0.4", "7.0.5", "7.0.6", "7.1", "7.1.1", "7.1.2", "8.0", "8.0.2", "8.1", "8.1.1", "8.1.2", "8.1.3", "8.2", "8.3", "8.4", "8.4.1", "9.0", "9.0.1", "9.0.2", "9.1", "9.2", "9.2.1", "9.3"];
+
+        var versionMask = new Mask({$ct: $(".content"),content:"数据加载中！"});
+        var tempMask = new Mask({$ct: $(".message_template"),content:"数据加载中！",isShow: false});
+        var sendMask = new Mask({$ct: $("#form_content"),content:"发送中！",isShow: false});
+
+        // 表情
+        var expre = new Expression({
+            $ct: $(".link2expression"),
+            $toInput: $(".message_text textarea"),
+            css: {
+                "left": "-16px",
+                "margin-left": "0px",
+                "margin-top": "20px"
+            },
+            triangleCss: {
+                "top": "-11px",
+                "left": "16px"
+            }
+        });
+
+        // 获取来赚版本及IOS版本信息
+        $.ajax({
+            url: versionUrl,
+            dataType: "json"
+        }).always(function(data){
+            versionMask.hide();
+            base.renderOption($("#app_version"),data.appVersion || app_version_default);
+            base.renderOption($("#sys_version"),data.deviceVersion || sys_version_default); 
+        });
+
+        // 获取模板信息
+        $.ajax({
+            url: tempUrl,
+            dataType: "json"
+        }).always(function(data){
+            base.renderOption($("#temp_id"),data);
+            $("#temp_id").trigger("change");
+        });
+
+        $("body").on("click", '[name="send_type"]', function() {
+            $(this).val() === "text" && expre.hideByLocking();
+        }).on("click", "#sendMsg", function() {
+            sendMask.show();
+            $.ajax({
+                type: "POST",
+                url: sendUrl,
+                dataType: "json",
+                data:$("#form_query,#form_content").serializeArray()
+            }).always(function(data){
+                sendMask.hide();
+                if(data.flag !== undefined){
+                    data.flag == "1" && $('.message').operTip('发送成功!','success');
+                    data.flag == "0" && $('.message').operTip('错误：'+data.msg,'danger');
+                    queryNum();
+                }else{
+                    $('.message').operTip('程序发生错误!','danger');
+                }
+            });
+        }).on("change", "#app_version,#sys_version,#login_date", function() {
+            $(".person_num_all").text("--");
+            $(".person_num_sended").text("--");
+            queryNum();
+        }).on("change", "#temp_id", function() {
+            tempMask.show();
+            $(".message_template li:not(:first)").remove();
+            renderTempKeys();
+        });
+        // 生成模板的keys
+        function renderTempKeys(){
+            $.ajax({
+                type: "POST",
+                url: tempUrl,
+                dataType: "json",
+                data:$("#form_content").serializeArray()
+            }).always(function(data){
+                var $lis = [];
+                $.each(data,function(i,item){
+                    var li = '<li>'
+                        +'<div class="ct_6 field">'+item+'</div>'
+                        +'<div class="ct_6-5">'
+                            +'<div class="grid">'
+                                +'<div class="ct_6 field_sec">value:</div>'
+                                +'<div class="ct_2">'
+                                    +'<input type="text" name="'+item+'[value]">'
+                                +'</div>'
+                                +'<div class="ct_6 field_sec">color:</div>'
+                                +'<div class="ct_6">'
+                                    +'<input type="color" name="'+item+'[color]">'
+                                +'</div>'
+                            +'</div>'
+                        +'</div>'
+                    +'</li>';
+                    $lis.push($(li));
+                });
+                tempMask.hide();
+                $(".message_template").append($lis);
+            });
+        }
+        // 查询当前所选择的条件下的人数
+        function queryNum(){
+            $.ajax({
+                url: sendUrl,
+                dataType: "json",
+                data: $("#form_query").serializeArray()
+            }).always(function(data){
+                if(data.num){
+                    $(".person_num_all").text(data.num);
+                    $(".person_num_sended").text(data.nowNum);
+                }else{
+                    $(".person_num").operTip('获取人数信息失败！',{theme: "danger",css:{left:"100px"}});
+                }
+            });
+        }
+        queryNum();
+        $(".message_text textarea").focus();
+    });
+    </script>
+    <div id="to_top">
+        <i class="iconfont icon-6cf"></i>
+    </div>
+</body>
+
+</html>
+
